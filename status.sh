@@ -88,8 +88,8 @@ while true; do
         RX_RATE=0
         TX_RATE=0
     else
-        RX_RATE=$(( (RX_CUR - RX_PREV) / 1024 * 3.3))
-        TX_RATE=$(( (TX_CUR - TX_PREV) / 1024 * 3.3))
+        RX_RATE=$(( (RX_CUR - RX_PREV) / 1024 * 10 / 3))
+        TX_RATE=$(( (TX_CUR - TX_PREV) / 1024 * 10 / 3))
     fi
 
     [ "$RX_RATE" -lt 0 ] && RX_RATE=0
